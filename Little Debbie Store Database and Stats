@@ -1,0 +1,50 @@
+/**Jons Store:
+Cosmic Brownies (1, 10, 7, 1.99)
+Fancy Cakes (2, 34, 3, 3.99)
+Chocolate Chip creme pies (3, 22, 4, 3.99)
+Swiss Rolls (4, 11, 2, 1.99)
+Zebra cakes (5, 10, 2, 2.99)
+Boston Creme Rolls (6, 43, 3, 1.99)
+Oatmeal creme pies (7, 23, 3, 4.99)
+Banana Twins (8, 11, 5, 2.99)
+Strawberry shorcake rolls (9, 33, 9, 2.99)
+Banana Marshmallow pies (10, 48, 2, 1.99)
+Fudge Rounds (11, 13, 4, 4.99)
+Star Crunch (12, 56, 5, 1.99)
+Honey Buns (13, 12, 2, 3.99)
+Nutty Buddy (14, 2, 4, 2.99)
+Pecan Spinwheels (15, 2, 9, 2.99)
+**/
+
+CREATE TABLE Jons_Store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+
+INSERT into jons_store VALUES (1, "cosmic brownies", 10, 7, 1.99);
+INSERT into jons_store VALUES (2, "Fancy Cakes", 34, 3, 3.99);
+INSERT into jons_store VALUES (3, "Chocolate chip creme pies", 22, 4, 3.99);
+INSERT into jons_store VALUES (4, "Swiss Rolls", 11, 2, 1.99);
+INSERT into jons_store VALUES (5, "Zebra Cakes", 10, 2, 2.99);
+INSERT into jons_store VALUES (6, "Boston Creme Rolls", 43, 3, 1.99);
+INSERT into jons_store VALUES (7, "Oatmeal Creme Pies", 23,3,4.99);
+INSERT into jons_store VALUES (8, "Banana Twins", 11,5,2.99);
+INSERT into jons_store VALUES (9, "Strawberry Shortcake Rolls", 33, 9, 2.99);
+INSERT into jons_store VALUES (10,"Banana Marshmallow Pies",48,2,1.99);
+INSERT into jons_store VALUES (11,"Fudge Rounds", 13,4,4.99);
+INSERT into jons_store VALUES (12, "Star Crunch", 56,5, 1.99);
+INSERT into jons_store VALUES (13, "Honey Buns", 12, 2, 3.99);
+INSERT into jons_store VALUES (14, "Nutty Buddy", 2,4, 2.99);
+INSERT into jons_store VALUES (15, "Pecan Spinwheels", 2,9,2.99);
+
+--Display the database ordered by price (Highest to lowest)
+SELECT * From jons_store 
+ORDER BY price desc;
+
+--Which items are more expense than 2.99
+SELECT * From jons_store
+WHERE price >=3.99
+ORDER BY price desc;
+
+--How many total items we have in stock
+SELECT Sum(quantity) FROM jons_store;
+
+
+
